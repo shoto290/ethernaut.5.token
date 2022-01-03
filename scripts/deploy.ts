@@ -7,10 +7,10 @@ async function main() {
   const deployers = await ethers.getSigners();
   console.log("Deployer address is", deployers[0].address);
 
-  // Change the owner of Ethernaut contract
-  const ChangeOwner = await ethers.getContractFactory("ChangeOwner");
-  const changeOwner = await ChangeOwner.deploy(ETHERNAUT_ADDRESS, deployers[0].address, { gasLimit: 1000000 });
-  console.log("Deploy ChangeOwner contract at", changeOwner.address);
+  // Send new token to the deployer
+  const Sender = await ethers.getContractFactory("Sender");
+  const sender = await Sender.deploy(ETHERNAUT_ADDRESS, deployers[0].address);
+  console.log("Deploy Sender contract at", sender.address);
 }
 
 main().catch((error) => {
