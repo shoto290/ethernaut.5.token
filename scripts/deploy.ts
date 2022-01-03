@@ -1,6 +1,6 @@
 import { ethers } from "hardhat";
 
-const ETHERNAUT_ADDRESS = "0x5d32a156B2Ea4c5605284bD339c9Ab525672c480";
+const ETHERNAUT_ADDRESS = "";
 
 async function main() {
   // Get Address on the private key
